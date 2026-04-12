@@ -8,7 +8,7 @@ export default function HCFlag() {
         autoplay: true,
         layout: new Layout({
             fit: Fit.Contain,
-            alignment: Alignment.Center,
+            alignment: Alignment.TopCenter,
         }),
         onLoad: () => {
             rive?.resizeDrawingSurfaceToCanvas();
@@ -19,7 +19,7 @@ export default function HCFlag() {
 
     return (
         <div 
-            className="h-10 w-40 pointer-events-auto cursor-pointer relative z-50"
+            className="h-70 w-70 top-0 pointer-events-auto cursor-pointer relative z-50"
             onMouseEnter={() => {
                 // eslint-disable-next-line react-hooks/immutability
                 if (isHoveredInput) isHoveredInput.value = true;

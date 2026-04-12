@@ -1,0 +1,35 @@
+'use client';
+import { useRive, useStateMachineInput, Layout, Fit, Alignment } from '@rive-app/react-canvas';
+
+export default function HCFlag() {
+    const { rive, RiveComponent } = useRive({
+        src: '/hc-flag.riv',
+        stateMachines: 'State Machine 1', 
+        autoplay: true,
+        layout: new Layout({
+            fit: Fit.Contain,
+            alignment: Alignment.Center,
+        }),
+        onLoad: () => {
+            rive?.resizeDrawingSurfaceToCanvas();
+        },
+    });
+
+    const isHoveredInput = useStateMachineInput(rive, 'State Machine 1', 'isHovered');
+
+    return (
+        <div 
+            className="h-10 w-40 pointer-events-auto cursor-pointer relative z-50"
+            onMouseEnter={() => {
+                // eslint-disable-next-line react-hooks/immutability
+                if (isHoveredInput) isHoveredInput.value = true;
+            }}
+            onMouseLeave={() => {
+                // eslint-disable-next-line react-hooks/immutability
+                if (isHoveredInput) isHoveredInput.value = false;
+            }}
+        >
+            <RiveComponent />
+        </div>
+    );
+}

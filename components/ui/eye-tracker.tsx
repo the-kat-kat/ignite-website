@@ -42,7 +42,7 @@ export default function EyeTracker() {
     }, [rive, mouseXInput, mouseYInput]);
 
         return (
-            <div style={{ width: '400px', height: '400px' }}>
+            <div className="h-64 w-64">
                 <RiveComponent />
             </div>
         );

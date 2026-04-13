@@ -1,5 +1,6 @@
 "use client";
 import Image from 'next/image';
+import Link from 'next/link';
 import EyeTracker from '@/components/ui/eye-tracker';
 import RiveAnim from '@/components/ui/rive-anim';
 
@@ -23,7 +24,7 @@ export default function Home() {
             </div>
             <button className="pointer-events-auto px-8 md:px-16 py-2 md:py-4 bg-white
              text-brand-primary text-xl md:text-6xl font-bold rounded-4xl hover:scale-120
-              active:scale-95 transition-all">
+              active:scale-95 transition-all ease-in-out">
               Get Started
             </button>
           </div>
@@ -49,7 +50,7 @@ export default function Home() {
 
               <div className="text-xl">
                 <p>
-                  Hack Club is of <span className="bg-white px-1 rounded-xl">the world&apos;s largest community teenage makers</span>, and a 501(c)(3) nonprofit! <br />
+                  Hack Club is of <span className="bg-white px-1 rounded-xl">the world&apos;s largest community of teenage makers</span>, and a 501(c)(3) nonprofit! <br />
                   Hack Club is supported by donations from tech companies like GitHub and individuals like Michael Dell.
                 </p>
               </div>
@@ -86,7 +87,7 @@ export default function Home() {
             <div className="flex flex-col gap-4 items-center bg-white rounded-4xl ring-8 ring-white/40">
               <div className="pt-16 px-8">
                 <p className="text-3xl pb-8">
-                  1. Start coding <br/> a project
+                  1. Start coding <br /> a project
                 </p>
                 <p className="text-xl">
                   Beginner? Don&apos;t worry, we have lots of guides to get you started!
@@ -101,7 +102,7 @@ export default function Home() {
             <div className="flex flex-col gap-4 items-center bg-white rounded-4xl ring-8 ring-white/40">
               <div className="pt-16 px-8">
                 <p className="text-3xl pb-8">
-                  1. Start coding <br/> a project
+                  1. Start coding <br /> a project
                 </p>
                 <p className="text-xl">
                   Beginner? Don&apos;t worry, we have lots of guides to get you started!
@@ -130,7 +131,7 @@ export default function Home() {
         </div>
 
         {/*the goods*/}
-        <div className="relative w-full py-24 flex flex-col justify-start items-center">
+        <div className="relative py-24 w-full flex flex-col justify-start items-center">
           <div className="z-0 absolute inset-0 -top-24">
             <Image
               src="/curve.svg"
@@ -140,16 +141,73 @@ export default function Home() {
             />
           </div>
 
-          <div className="z-50 pt-64 text-6xl text-white font-display">
-            <p>
-              Meet your new personal computer!
+          <div className="z-50 pt-64 text-black font-display text-center">
+            <p className="text-6xl mb-4">
+              Meet your new personal computer!?
+            </p>
+            <p className="text-xl">
+              (All computers are refurbished, however free returns are offered)
             </p>
           </div>
 
 
-        {/*computers*/}
-        </div>
+          {/*computers*/}
+          <div className="z-50 max-w-5xl flex flex-col gap-16 justify-center items-center">
+              <Link
+                href="https://www.backmarket.com/en-us/p/lenovo-100e-116-inch-amd-a4-9120c-4-gb-hdd-32-gb/ef382c91-4a88-4002-a20c-1825cb623fb8?l=12"
+                target="_blank" 
+                className="flex flex-col items-center -rotate-5 md:-rotate-[10deg] hover:scale-120
+              active:scale-95 transition-all ease-in-out pointer-events-auto group"
+              >
+                <Image
+                  src="/chromebook.png"
+                  alt="pc 1"
+                  width={500}
+                  height={400}
+                  className="object-cover rounded-2xl "
+                />
+                <p className="text-xl text-center text-black -mt-8">
+                  Refurbished Lenovo Chromebook <br/> (32 GB storage, 4GB RAM)
+                </p>
+              </Link>
 
+              <Link
+                href="https://www.backmarket.com/en-us/p/lenovo-100e-116-inch-amd-a4-9120c-4-gb-hdd-32-gb/ef382c91-4a88-4002-a20c-1825cb623fb8?l=12"
+                target="_blank" 
+                className="flex flex-col items-center rotate-5 md:rotate-[10deg] hover:scale-120
+              active:scale-95 transition-all ease-in-out pointer-events-auto group"
+              >
+                <Image
+                  src="/chromebook.png"
+                  alt="pc 1"
+                  width={500}
+                  height={400}
+                  className="object-cover rounded-2xl "
+                />
+                <p className="text-xl text-center text-black -mt-8">
+                  Refurbished Lenovo Chromebook <br/> (32 GB storage, 4GB RAM)
+                </p>
+              </Link>
+
+              <Link
+                href="https://www.backmarket.com/en-us/p/lenovo-100e-116-inch-amd-a4-9120c-4-gb-hdd-32-gb/ef382c91-4a88-4002-a20c-1825cb623fb8?l=12"
+                target="_blank" 
+                className="flex flex-col items-center -rotate-5 md:-rotate-[10deg] hover:scale-120
+              active:scale-95 transition-all ease-in-out pointer-events-auto group"
+              >
+                <Image
+                  src="/chromebook.png"
+                  alt="pc 1"
+                  width={500}
+                  height={400}
+                  className="object-cover rounded-2xl "
+                />
+                <p className="text-xl text-center text-black -mt-8">
+                  Refurbished Lenovo Chromebook <br/> (32 GB storage, 4GB RAM)
+                </p>
+              </Link>
+          </div>
+        </div>
 
       </div>
     </main>

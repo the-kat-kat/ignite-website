@@ -4,7 +4,7 @@ import {useEffect } from 'react';
 
 export default function EyeTracker() {
     const { rive, RiveComponent } = useRive({
-        src: '/flame.riv',
+        src: '/landing.riv',
         stateMachines: 'State Machine 1',
         autoplay: true,
     });
@@ -13,6 +13,8 @@ export default function EyeTracker() {
     const mouseYInput = useStateMachineInput(rive, 'State Machine 1', 'mouseY');
 
     useEffect(() => {
+        if (!rive || !mouseXInput || !mouseYInput) return;
+        
         let mouseX = 0;
         let mouseY = 0;
         let currentX = 0;
@@ -42,7 +44,7 @@ export default function EyeTracker() {
     }, [rive, mouseXInput, mouseYInput]);
 
         return (
-            <div className="h-64 w-64">
+            <div className="w-full aspect-square">
                 <RiveComponent />
             </div>
         );

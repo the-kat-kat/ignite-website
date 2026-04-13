@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
 import Header from "@/components/layout/header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import localFont from "next/font/local";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const monoTrust = localFont({
+  src: '../public/fonts/MomoTrustDisplay-Regular.ttf',
+  variable: '--font-mono-trust',
+  display: 'swap',
+})
+
+const monoTrustSans = localFont({
+  src: '../public/fonts/MomoTrustSans.ttf',
+  variable: '--font-mono-sans',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,13 +30,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+      className={`${monoTrust.variable} ${monoTrustSans.variable} h-full antialiased`}    >
       <body className="min-h-full flex flex-col"
-      suppressHydrationWarning={true}>
+        suppressHydrationWarning={true}
+      >
         <Header />
         {children}
-        </body>
+      </body>
     </html>
   );
 }

@@ -5,28 +5,32 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center">
 
-      <div className="z-0 absolute inset-0 items-center justify center w-full">
+      <div className="z-0 absolute inset-0 items-center justify-center -translate-y-1/12 -translate-x-1/4 w-[200%] h-full md:w-full md:-translate-y-1/3 md:translate-x-1/4">
         <EyeTracker />
       </div>
 
-      <div className="z-50 grid grid-rows-2 justify-items-center pointer-events-none">
-        <div className="grid grid-cols-2 justify-items-center items-center w-full ">
-          <div className="items-center justify-center flex flex-col gap-16">
-            <div className="text-6xl text-center font-display">
+      <div className="z-50 grid flex-col justify-items-center pointer-events-none">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center items-center w-full ">
+          
+          <div className="items-center justify-center flex flex-col gap-8 order-2 lg:order-1">
+            <div className="text-4xl md:text-6xl text-center font-display">
               Code 3 projects, <br /> Earn a personal computer!
             </div>
-            <button className="pointer-events-auto px-16 py-4 bg-brand-primary
-             text-white text-3xl font-bold rounded-2xl hover:scale-120
+            <button className="pointer-events-auto px-8 md:px-16 py-2 md:py-4 bg-brand-primary
+             text-white text-xl md:text-3xl font-bold rounded-4xl hover:scale-120
              shadow-[0px_10px_0px_0px_var(--brand-secondary)] 
-              active:scale-90 transition-all">
+              active:scale-95 transition-all">
               Get Started
             </button>
           </div>
-          <div className="h-200 w-200 ">
+
+          <div className="h-[53vh] md:h-96 w-96 order-1 lg:order-2">
             {/*space for eye tracker */}
           </div>
         </div>
 
+        {/* ok thats the end of the first part */}
         <div className="h-20 bottom-0 left-0 w-full border-gray-200 py-4 z-50">
           <div className="flex justify-center text-center text-brand-primary items-center">
             <p>

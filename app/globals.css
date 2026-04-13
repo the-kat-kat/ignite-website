@@ -4,7 +4,7 @@
   --brand-primary: #FE751F;
   --brand-secondary: #EB5903;
   --brand-accent: #FFB230;
-  --background: #ffffff;
+  --background: #FFB230;
   --text-main: #000000;
 }
 
@@ -22,3 +22,4 @@ body {
   background: var(--background);
   color: var(--foreground);
 }
+

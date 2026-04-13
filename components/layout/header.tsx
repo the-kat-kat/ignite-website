@@ -19,11 +19,11 @@ export default function Header() {
     })
 
     return (
-        <header className="sticky top-0 z-100 w-full">
-            <div className=" border-white/10 border-b h-20 grid grid-cols-3 items-center px-5">
+        <header className={'sticky top-0 z-100 w-full duration-300 transition-all ease-in-out ' + (isScrolled ? 'bg-white/50 backdrop-blur-md' : 'bg-transparent')}>
+            <div className=" h-20 grid grid-cols-3 items-center px-5">
                 <div className="relative h-full flex items-center">
-                    <div className="absolute top-0 left-[15%]">
-                        <HCFlag />
+                    <div className="absolute top-0">
+
                     </div>
                 </div>
 
@@ -31,10 +31,10 @@ export default function Header() {
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     className="flex justify-center items-center text-3xl text-brand-secondary font-display hover:scale-125 active:scale-95 transition-all ease-in-out">
                     <Image
-                        src="../public/ignite-icon.svg"
+                        src="/ignite-icon.svg"
                         alt="iconn"
-                        width={32}
-                        height={32}
+                        width={64}
+                        height={64}
                         className="object-contain"
                     />
 
@@ -43,7 +43,12 @@ export default function Header() {
 
 
                 <div className="flex justify-end items-center gap-6">
-                    get started
+                    <button className="pointer-events-auto px-4 py-2 bg-brand-primary
+             text-white text-md font-bold rounded-xl hover:scale-120
+             shadow-[0px_5px_0px_0px_var(--brand-secondary)] 
+              active:scale-90 transition-all">
+                        Get Started
+                    </button>
                 </div>
             </div>
         </header>

@@ -26,7 +26,7 @@ export default function Header() {
     }, []);
 
     return (
-        <header className={'sticky top-0 z-100 w-full duration-300 transition-all ease-in-out ' + (isScrolled ? 'bg-brand-accent/50 backdrop-blur-md' : 'bg-transparent')}>
+        <header className={'sticky top-0 z-100 w-full duration-300 transition-all ease-in-out ' + (isScrolled ? 'bg-brand-secondary/50 backdrop-blur-md' : 'bg-transparent')}>
             <div className=" h-10 md:h-20 grid grid-cols-3 items-center px-5">
                 <div className="relative h-full flex items-center">
                     <div className="absolute top-0">
@@ -36,9 +36,9 @@ export default function Header() {
 
                 <div
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    className="flex justify-center items-center text-md md:text-3xl text-brand-secondary font-display hover:scale-125 active:scale-95 transition-all ease-in-out">
+                    className="flex justify-center items-center text-md md:text-3xl text-white font-display hover:scale-125 active:scale-95 transition-all ease-in-out">
                     <Image
-                        src="/ignite-icon.svg"
+                        src="/ignite-icon-white.svg"
                         alt="iconn"
                         width={48}
                         height={48}
@@ -51,8 +51,8 @@ export default function Header() {
 
             <div className="flex justify-end items-center gap-6">
                 <button className=
-                {'pointer-events-auto px-4 py-2 bg-brand-primary text-white text-md font-bold rounded-xl hover:scale-120 active:scale-90 transition-all shadow-[0px_5px_0px_0px_var(--brand-secondary)] ' +
-                 (isScrolled ? 'opacity-100 pointer-event-auto' : 'opacity-0 pointer-event-none')}>
+                {'pointer-events-auto px-2 md:px-4 py-2 bg-white text-brand-primary text-sm md:text-md rounded-xl hover:scale-120 active:scale-90 transition-all ease-in-out' +
+                 (isScrolled ? ' opacity-100 pointer-event-auto' : ' opacity-0 pointer-event-none')}>
                     Get Started
                 </button>
             </div>

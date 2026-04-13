@@ -42,14 +42,13 @@ export default function Header() {
                 </div>
 
 
-                <div className="flex justify-end items-center gap-6">
-                    <button className="pointer-events-auto px-4 py-2 bg-brand-primary
-             text-white text-md font-bold rounded-xl hover:scale-120
-             shadow-[0px_5px_0px_0px_var(--brand-secondary)] 
-              active:scale-90 transition-all">
-                        Get Started
-                    </button>
-                </div>
+            <div className="flex justify-end items-center gap-6">
+                <button className=
+                {'pointer-events-auto px-4 py-2 bg-brand-primary text-white text-md font-bold rounded-xl hover:scale-120 active:scale-90 transition-all shadow-[0px_5px_0px_0px_var(--brand-secondary)] ' +
+                 (isScrolled ? 'opacity-100 pointer-event-auto' : 'opacity-0 pointer-event-none')}>
+                    Get Started
+                </button>
+            </div>
             </div>
         </header>
     )

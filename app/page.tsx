@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import EyeTracker from '@/components/ui/eye-tracker';
+import RiveAnim from '@/components/ui/rive-anim';
 
 export default function Home() {
   return (
@@ -33,23 +34,23 @@ export default function Home() {
         </div>
 
         {/* ok thats the end of the first part */}
-        <div className="relative w-full md:mt-96 py-24 md:h-64 flex justify-center items-center">
-          <div className="z-0 absolute inset-0 -translate-x-1/4 -translate-y-1/8
+        <div className="relative w-full md:mt-96 py-24 md:h-64 flex flex-col justify-start items-center">
+          <div className="z-0 absolute inset-0 -translate-x-1/4
                     w-[150vw] h-32 md:h-64 bg-brand-accent 
                     rotate-2 md:rotate-[5deg] pointer-events-none" />
 
-          <div className="z-50 flex px-16 justify-center text-center text-xl text-brand-primary items-cente rotate-2 md:rotate-[5deg]">
-            <div className="grid grid-cols-[1fr_2fr] font-bold md:text-6xl mb-4">
-              <div className="text-4xl">
+          <div className="z-50 flex px-16 justify-center text-center text-brand-secondary items-center rotate-2 md:rotate-[5deg]">
+            <div className="grid grid-cols-[1fr_2fr] font-bold md:text-6xl mb-4 items-center">
+              <div className="text-4xl r">
                 <p>
-                  Is this real? <br/> What is Hack Club?
+                  Is this real? <br /> What is Hack Club?
                 </p>
               </div>
 
-              <div className="text-xl text-center">
+              <div className="text-xl">
                 <p>
-                  Hack Club is the world&apos;s largest community of teenage makers, and a 501(c)(3) nonprofit! <br />
-                  Hack Club is supported by donations from tech companies like GitHub and individuals like Michael Dell. Hack Club is fiscally transparent.
+                  Hack Club is of <span className="bg-white px-1 rounded-xl">the world&apos;s largest community teenage makers</span>, and a 501(c)(3) nonprofit! <br />
+                  Hack Club is supported by donations from tech companies like GitHub and individuals like Michael Dell.
                 </p>
               </div>
             </div>
@@ -57,6 +58,99 @@ export default function Home() {
         </div>
 
         {/* ok how it works*/}
+        <div className="relative w-full py-24 flex flex-col justify-start items-center">
+          <div className="text-6xl text-white font-display">
+            <p>
+              How it works
+            </p>
+          </div>
+
+          <div className="grid grid-cols-4 px-16 gap-8 mt-16 justify-center items-center text-brand-secondary font-bold text-center">
+            {/* step 1 */}
+            <div className="flex flex-col gap-4 items-center bg-white rounded-4xl ring-8 ring-white/40">
+              <div className="pt-16 px-8">
+                <p className="text-3xl pb-8">
+                  1. Start coding <br /> a project
+                </p>
+                <p className="text-xl">
+                  Beginner? Don&apos;t worry, we have lots of guides to get you started!
+                </p>
+              </div>
+              <div>
+                <RiveAnim src="/placeholder.riv" className="w-64 h-64" />
+              </div>
+            </div>
+
+
+            {/* step 2 */}
+            <div className="flex flex-col gap-4 items-center bg-white rounded-4xl ring-8 ring-white/40">
+              <div className="pt-16 px-8">
+                <p className="text-3xl pb-8">
+                  1. Start coding <br/> a project
+                </p>
+                <p className="text-xl">
+                  Beginner? Don&apos;t worry, we have lots of guides to get you started!
+                </p>
+              </div>
+              <div>
+                <RiveAnim src="/placeholder.riv" className="w-64 h-64" />
+              </div>
+            </div>
+
+            {/* step 3 */}
+            <div className="flex flex-col gap-4 items-center bg-white rounded-4xl ring-8 ring-white/40">
+              <div className="pt-16 px-8">
+                <p className="text-3xl pb-8">
+                  1. Start coding <br/> a project
+                </p>
+                <p className="text-xl">
+                  Beginner? Don&apos;t worry, we have lots of guides to get you started!
+                </p>
+              </div>
+              <div>
+                <RiveAnim src="/placeholder.riv" className="w-64 h-64" />
+              </div>
+            </div>
+
+            {/* step 4 */}
+            <div className="flex flex-col gap-4 items-center bg-white rounded-4xl ring-8 ring-white/40">
+              <div className="pt-16 px-8">
+                <p className="text-3xl pb-8">
+                  1. Start coding <br /> a project
+                </p>
+                <p className="text-xl">
+                  Beginner? Don&apos;t worry, we have lots of guides to get you started!
+                </p>
+              </div>
+              <div>
+                <RiveAnim src="/placeholder.riv" className="w-64 h-64" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/*the goods*/}
+        <div className="relative w-full py-24 flex flex-col justify-start items-center">
+          <div className="z-0 absolute inset-0 -top-24">
+            <Image
+              src="/curve.svg"
+              alt="the goods bg"
+              fill
+              className="object-cover object-top pointer-events-none"
+            />
+          </div>
+
+          <div className="z-50 pt-64 text-6xl text-white font-display">
+            <p>
+              Meet your new personal computer!
+            </p>
+          </div>
+
+
+        {/*computers*/}
+        </div>
+
+
       </div>
     </main>
   );

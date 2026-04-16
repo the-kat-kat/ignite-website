@@ -182,7 +182,7 @@ export default function Home() {
 
           <div className="relative z-50 flex flex-colgap-4 text-brand-secondary font-bold text-center items-center bg-white rounded-4xl ring-8 ring-white/40 hover:scale-105
               active:scale-95 transition-all ease-in-out pointer-events-auto pt-4">
-            <div className="py-4 px-16">
+            <div className="py-8 px-16">
               <p className="text-xl text-brand-accent">
                 Step 5:
               </p>

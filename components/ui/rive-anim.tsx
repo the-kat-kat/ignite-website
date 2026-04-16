@@ -60,7 +60,7 @@ export default function RiveAnim({
 
     return (
         <div className={className}>
-            <RiveComponent/>
+            <RiveComponent className="w-full h-full"/>
         </div>
     );
 }

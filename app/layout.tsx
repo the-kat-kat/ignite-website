@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { Analytics } from '@vercel/analytics/react';
 import "./globals.css";
 
 import Header from "@/components/layout/header";
 
 import localFont from "next/font/local";
+import Footer from "@/components/layout/footer";
 
 const monoTrust = localFont({
   src: '../public/fonts/MomoTrustDisplay-Regular.ttf',
@@ -36,6 +38,8 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
+        <Analytics />
       </body>
     </html>
   );

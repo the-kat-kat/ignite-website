@@ -12,7 +12,6 @@ export default function Header() {
             const desktopThreshold= 50;
 
             const threshold = window.innerWidth < 768 ? mobileThreshold : desktopThreshold;
-            console.log("Scroll Y:", window.scrollY, "Threshold:", threshold);
 
             setIsScrolled(window.scrollY > threshold);
         };

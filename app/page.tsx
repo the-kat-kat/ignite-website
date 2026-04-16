@@ -50,7 +50,14 @@ export default function Home() {
 
               <div className="text-xl">
                 <p>
-                  Hack Club is of <span className="bg-white px-1 rounded-xl">the world&apos;s largest community of teenage makers</span>, and a 501(c)(3) nonprofit! <br />
+                  <Link
+                    href="https://hackclub.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="pointer-events-auto underline decoration-2 underline-offset-4 hover:text-white transition-colors"
+                  >
+                    Hack Club
+                  </Link> is of <span className="bg-white px-1 rounded-xl">the world&apos;s largest community of teenage makers</span>, and a 501(c)(3) nonprofit! <br />
                   Hack Club is supported by donations from tech companies like GitHub and individuals like Michael Dell.
                 </p>
               </div>
@@ -59,156 +66,174 @@ export default function Home() {
         </div>
 
         {/* ok how it works*/}
-        <div className="relative w-full py-24 flex flex-col justify-start items-center">
-          <div className="text-6xl text-white font-display">
+        <div className="relative w-full pt-24 pb-12 flex flex-col justify-start text-center items-center">
+          <div className="text-5xl text-white font-display">
             <p>
               How it works
             </p>
           </div>
 
-          <div className="grid grid-cols-4 px-16 gap-8 mt-16 justify-center items-center text-brand-secondary font-bold text-center">
+          <div className="mt-4 text-2xl text-white font-display">
+            <p>
+              You Ship: 3 projects
+            </p>
+            <p>
+              We Ship: A personal computer
+            </p>
+          </div>
+
+          <div className="grid grid-cols-4 px-16 gap-8 mt-16 justify-start items-start text-brand-secondary font-bold text-center">
             {/* step 1 */}
-            <div className="flex flex-col gap-4 items-center bg-white rounded-4xl ring-8 ring-white/40">
-              <div className="pt-16 px-8">
+            <div className="flex flex-col gap-4 items-center bg-white rounded-4xl ring-8 ring-white/40 hover:scale-105
+              active:scale-95 transition-all ease-in-out pointer-events-auto">
+              <div className="py-16 px-8">
+                <p className="text-xl text-brand-accent">
+                  Step 1:
+                </p>
                 <p className="text-3xl pb-8">
-                  1. Start coding <br /> a project
+                  Start coding <br /> a project
                 </p>
                 <p className="text-xl">
                   Beginner? Don&apos;t worry, we have lots of guides to get you started!
                 </p>
-              </div>
-              <div>
-                <RiveAnim src="/placeholder.riv" className="w-64 h-64" />
               </div>
             </div>
 
 
             {/* step 2 */}
-            <div className="flex flex-col gap-4 items-center bg-white rounded-4xl ring-8 ring-white/40">
-              <div className="pt-16 px-8">
+            <div className="flex flex-col gap-4 items-center bg-white rounded-4xl ring-8 ring-white/40 hover:scale-105
+              active:scale-95 transition-all ease-in-out pointer-events-auto">
+              <div className="py-16 px-8">
+                <p className="text-xl text-brand-accent">
+                  Step 2:
+                </p>
                 <p className="text-3xl pb-8">
-                  1. Start coding <br /> a project
+                  Track your progress
                 </p>
                 <p className="text-xl">
-                  Beginner? Don&apos;t worry, we have lots of guides to get you started!
+                  We&apos;ll let you know how to set up hackatime!
                 </p>
-              </div>
-              <div>
-                <RiveAnim src="/placeholder.riv" className="w-64 h-64" />
               </div>
             </div>
 
             {/* step 3 */}
-            <div className="flex flex-col gap-4 items-center bg-white rounded-4xl ring-8 ring-white/40">
-              <div className="pt-16 px-8">
+            <div className="flex flex-col gap-4 items-center bg-white rounded-4xl ring-8 ring-white/40 hover:scale-105
+              active:scale-95 transition-all ease-in-out pointer-events-auto">
+              <div className="py-16 px-8">
+                <p className="text-xl text-brand-accent">
+                  Step 3:
+                </p>
                 <p className="text-3xl pb-8">
-                  1. Start coding <br /> a project
+                  Repeat that x3
                 </p>
                 <p className="text-xl">
-                  Beginner? Don&apos;t worry, we have lots of guides to get you started!
+                  Get more pracitce coding by creating more projects. You will need to ship 3 in total. 
                 </p>
-              </div>
-              <div>
-                <RiveAnim src="/placeholder.riv" className="w-64 h-64" />
               </div>
             </div>
 
             {/* step 4 */}
-            <div className="flex flex-col gap-4 items-center bg-white rounded-4xl ring-8 ring-white/40">
-              <div className="pt-16 px-8">
+            <div className="flex flex-col gap-4 items-center bg-white rounded-4xl ring-8 ring-white/40 hover:scale-105
+              active:scale-95 transition-all ease-in-out pointer-events-auto">
+              <div className="py-16 px-8">
+                <p className="text-xl text-brand-accent">
+                  Step 4:
+                </p>
                 <p className="text-3xl pb-8">
-                  1. Start coding <br /> a project
+                  Submit!
                 </p>
                 <p className="text-xl">
-                  Beginner? Don&apos;t worry, we have lots of guides to get you started!
+                  Celebrate while we review your projects :) 
                 </p>
-              </div>
-              <div>
-                <RiveAnim src="/placeholder.riv" className="w-64 h-64" />
               </div>
             </div>
           </div>
         </div>
 
         {/*the goods*/}
-        <div className="relative py-24 w-full flex flex-col justify-start items-center">
+        <div className="w-full relative py-24 flex flex-col justify-start items-center">
           <div className="z-0 absolute inset-0 -top-24">
-            <Image
-              src="/curve.svg"
-              alt="the goods bg"
-              fill
-              className="object-cover object-top pointer-events-none"
+            <RiveAnim
+              src="/bouncy.riv"
+              className="object-contain object-top w-full h-full pointer-events-none"
             />
           </div>
 
-          <div className="z-50 pt-32 text-black font-display text-center">
-            <p className="text-6xl mb-4">
-              Meet your new personal computer!?
-            </p>
-            <p className="text-xl">
-              (All computers are refurbished, however free returns are offered)
-            </p>
-          </div>
+          <div className="z-50 flex flex-col gap-4 text-brand-secondary font-bold text-center items-center bg-white rounded-4xl ring-8 ring-white/40 hover:scale-105
+              active:scale-95 transition-all ease-in-out pointer-events-auto py-4 pb-8">
+              <div className="py-4 px-16">
+                <p className="text-xl text-brand-accent">
+                  Step 5:
+                </p>
+                <p className="text-3xl ">
+                  Meet your personal computer?!
+                </p>
+                 <p className="text-xl pt-4">
+                  For every approved hour you spent coding, we&apos;ll provide you $5 in grants to buy your computer
+                </p>
+              </div>
+            </div>
 
 
           {/*computers*/}
-          <div className="z-50 max-w-5xl flex flex-col gap-16 justify-center items-center">
-              <Link
-                href="https://www.backmarket.com/en-us/p/lenovo-100e-116-inch-amd-a4-9120c-4-gb-hdd-32-gb/ef382c91-4a88-4002-a20c-1825cb623fb8?l=12"
-                target="_blank" 
-                className="flex flex-col items-center -rotate-5 md:-rotate-[10deg] hover:scale-120
+          <div className="z-50 px-16 grid grid-cols-3 gap-32 justify-center items-center">
+            <Link
+              href="https://www.backmarket.com/en-us/p/lenovo-100e-116-inch-amd-a4-9120c-4-gb-hdd-32-gb/ef382c91-4a88-4002-a20c-1825cb623fb8?l=12"
+              target="_blank"
+              className="flex flex-col items-center -rotate-5 md:-rotate-[10deg] hover:scale-120
               active:scale-95 transition-all ease-in-out pointer-events-auto group"
-              >
-                <Image
-                  src="/chromebook.png"
-                  alt="pc 1"
-                  width={500}
-                  height={400}
-                  className="object-cover rounded-2xl "
-                />
-                <p className="text-xl text-center text-black -mt-8">
-                  Refurbished Lenovo Chromebook <br/> (32 GB storage, 4GB RAM)
-                </p>
-              </Link>
+            >
+              <Image
+                src="/chrome_bordered.png"
+                alt="pc 1"
+                width={400}
+                height={400}
+                className="object-cover rounded-2xl "
+              />
+              <p className="text-xl text-center text-white -mt-4">
+                Refurbished Lenovo Chromebook <br /> (32 GB storage, 4GB RAM)
+              </p>
+            </Link>
 
-              <Link
-                href="https://www.backmarket.com/en-us/p/lenovo-100e-116-inch-amd-a4-9120c-4-gb-hdd-32-gb/ef382c91-4a88-4002-a20c-1825cb623fb8?l=12"
-                target="_blank" 
-                className="flex flex-col items-center rotate-5 md:rotate-[10deg] hover:scale-120
+            <Link
+              href="https://www.backmarket.com/en-us/p/lenovo-100e-116-inch-amd-a4-9120c-4-gb-hdd-32-gb/ef382c91-4a88-4002-a20c-1825cb623fb8?l=12"
+              target="_blank"
+              className="flex flex-col items-center rotate-5 md:rotate-[10deg] hover:scale-120
               active:scale-95 transition-all ease-in-out pointer-events-auto group"
-              >
-                <Image
-                  src="/mac.png"
-                  alt="pc 1"
-                  width={500}
-                  height={400}
-                  className="object-cover rounded-2xl "
-                />
-                <p className="text-xl text-center text-black -mt-16">
-                  Refurbished MacBook Air (2015, 128 GB storage, 4GB RAM)
-                </p>
-              </Link>
+            >
+              <Image
+                src="/mac_bordered.png"
+                alt="pc 1"
+                width={600}
+                height={500}
+                className="object-cover rounded-2xl "
+              />
+              <p className="text-xl text-center text-white -mt-4">
+                Refurbished MacBook Air (2015, 128 GB storage, 4GB RAM)
+              </p>
+            </Link>
 
-              <Link
-                href="https://www.backmarket.com/en-us/p/lenovo-100e-116-inch-amd-a4-9120c-4-gb-hdd-32-gb/ef382c91-4a88-4002-a20c-1825cb623fb8?l=12"
-                target="_blank" 
-                className="flex flex-col items-center -rotate-5 md:-rotate-[10deg] hover:scale-120
+            <Link
+              href="https://www.backmarket.com/en-us/p/lenovo-100e-116-inch-amd-a4-9120c-4-gb-hdd-32-gb/ef382c91-4a88-4002-a20c-1825cb623fb8?l=12"
+              target="_blank"
+              className="flex flex-col items-center -rotate-5 md:-rotate-[10deg] hover:scale-120
               active:scale-95 transition-all ease-in-out pointer-events-auto group"
-              >
-                <Image
-                  src="/mac.png"
-                  alt="pc 1"
-                  width={500}
-                  height={400}
-                  className="object-cover rounded-2xl "
-                />
-                <p className="text-xl text-center text-black -mt-16">
-                  Refurbished MacBook Air (2017, 128 GB storage, 8GB RAM)
-                </p>
-              </Link>
+            >
+              <Image
+                src="/mac_bordered.png"
+                alt="pc 1"
+                width={600}
+                height={500}
+                className="object-cover rounded-2xl "
+              />
+              <p className="text-xl text-center text-white -mt-4">
+                Refurbished MacBook Air (2017, 128 GB storage, 8GB RAM)
+              </p>
+            </Link>
           </div>
         </div>
 
+        {/*faq*/}
       </div>
     </main>
   );

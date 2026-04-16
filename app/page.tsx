@@ -137,7 +137,7 @@ export default function Home() {
                   Repeat that x3
                 </p>
                 <p className="text-xl">
-                  Get more pracitce coding by creating more projects. You will need to ship 3 in total.
+                  Get more pracitce coding by creating more projects! You will need to ship 3 in total.
                 </p>
                 <div className="relative mt-8 w-full flex items-center justify-center">
                   <RiveAnim
@@ -189,7 +189,7 @@ export default function Home() {
               <p className="text-3xl ">
                 Meet your personal computer?!
               </p>
-              <p className="text-xl pt-4">
+              <p className="text-xl py-4">
                 For every approved hour you spent coding, we&apos;ll provide you $5 in grants to buy your computer
               </p>
             </div>

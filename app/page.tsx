@@ -141,7 +141,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="z-50 pt-64 text-black font-display text-center">
+          <div className="z-50 pt-32 text-black font-display text-center">
             <p className="text-6xl mb-4">
               Meet your new personal computer!?
             </p>
@@ -178,14 +178,14 @@ export default function Home() {
               active:scale-95 transition-all ease-in-out pointer-events-auto group"
               >
                 <Image
-                  src="/chromebook.png"
+                  src="/mac.png"
                   alt="pc 1"
                   width={500}
                   height={400}
                   className="object-cover rounded-2xl "
                 />
-                <p className="text-xl text-center text-black -mt-8">
-                  Refurbished Lenovo Chromebook <br/> (32 GB storage, 4GB RAM)
+                <p className="text-xl text-center text-black -mt-16">
+                  Refurbished MacBook Air (2015, 128 GB storage, 4GB RAM)
                 </p>
               </Link>
 
@@ -196,14 +196,14 @@ export default function Home() {
               active:scale-95 transition-all ease-in-out pointer-events-auto group"
               >
                 <Image
-                  src="/chromebook.png"
+                  src="/mac.png"
                   alt="pc 1"
                   width={500}
                   height={400}
                   className="object-cover rounded-2xl "
                 />
-                <p className="text-xl text-center text-black -mt-8">
-                  Refurbished Lenovo Chromebook <br/> (32 GB storage, 4GB RAM)
+                <p className="text-xl text-center text-black -mt-16">
+                  Refurbished MacBook Air (2017, 128 GB storage, 8GB RAM)
                 </p>
               </Link>
           </div>

@@ -6,18 +6,18 @@ import RiveAnim from '@/components/ui/rive-anim';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start pt-20 md:pt-32 overflow-x-hidden">
+    <main className="flex flex-col items-center justify-start overflow-x-hidden">
 
       <div className="z-0 absolute inset-0 items-center -translate-y-1/12 -translate-x-1/4 w-[200%] h-full md:w-full md:-translate-y-1/2 md:translate-x-1/4 md:pt-[20vh]">
         <EyeTracker />
       </div>
 
-      <div className="z-50 grid flex-col justify-items-center pointer-events-none">
+      <div className="z-50 grid flex-col justify-items-center">
 
         <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center items-center w-full ">
 
           <div className="items-center justify-center flex flex-col gap-4 md:gap-8 order-2 lg:order-1">
-            <div className="leading-relaxed text-4xl text-foreground md:text-6xl text-center font-display">
+            <div className="leading-relaxed text-4xl pt-32 md:pt-48 text-foreground md:text-6xl text-center font-display">
               <p>
                 Code 3 projects, <br /> Earn a <span className="bg-brand-accent px-2 rounded-xl">personal computer!</span>
               </p>
@@ -82,7 +82,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-4 px-16 gap-8 mt-16 justify-start items-start text-brand-secondary font-bold text-center">
+          <div className="z-50 grid grid-cols-4 px-16 gap-8 mt-16 justify-start items-start text-brand-secondary font-bold text-center">
             {/* step 1 */}
             <div className="flex flex-col gap-4 items-center bg-white rounded-4xl ring-8 ring-white/40 hover:scale-105
               active:scale-95 transition-all ease-in-out pointer-events-auto">
@@ -96,6 +96,11 @@ export default function Home() {
                 <p className="text-xl">
                   Beginner? Don&apos;t worry, we have lots of guides to get you started!
                 </p>
+                <div className="relative mt-8 w-full flex items-center justify-center">
+                  <RiveAnim
+                    src="/typing.riv"
+                  />
+                </div>
               </div>
             </div>
 
@@ -113,6 +118,11 @@ export default function Home() {
                 <p className="text-xl">
                   We&apos;ll let you know how to set up hackatime!
                 </p>
+                <div className="relative mt-8 w-full flex items-center justify-center">
+                  <RiveAnim
+                    src="/clock.riv"
+                  />
+                </div>
               </div>
             </div>
 
@@ -127,8 +137,13 @@ export default function Home() {
                   Repeat that x3
                 </p>
                 <p className="text-xl">
-                  Get more pracitce coding by creating more projects. You will need to ship 3 in total. 
+                  Get more pracitce coding by creating more projects. You will need to ship 3 in total.
                 </p>
+                <div className="relative mt-8 w-full flex items-center justify-center">
+                  <RiveAnim
+                    src="/ships.riv"
+                  />
+                </div>
               </div>
             </div>
 
@@ -143,40 +158,46 @@ export default function Home() {
                   Submit!
                 </p>
                 <p className="text-xl">
-                  Celebrate while we review your projects :) 
+                  Celebrate while we review your projects :)
                 </p>
+
+                <div className="relative mt-8 w-full flex items-center justify-center">
+                  <RiveAnim
+                    src="/flame.riv"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         {/*the goods*/}
-        <div className="w-full relative py-24 flex flex-col justify-start items-center">
-          <div className="z-0 absolute inset-0 -top-24">
+        <div className="w-full relative flex flex-col justify-start items-center overflow-hidden py-12">
+          <div className="z-0 inset-0 w-full justify-end absolute pointer-events-none overflow-hidden">
             <RiveAnim
               src="/bouncy.riv"
-              className="object-contain object-top w-full h-full pointer-events-none"
+              className="object-cover w-full h-full"
             />
           </div>
 
-          <div className="z-50 flex flex-col gap-4 text-brand-secondary font-bold text-center items-center bg-white rounded-4xl ring-8 ring-white/40 hover:scale-105
-              active:scale-95 transition-all ease-in-out pointer-events-auto py-4 pb-8">
-              <div className="py-4 px-16">
-                <p className="text-xl text-brand-accent">
-                  Step 5:
-                </p>
-                <p className="text-3xl ">
-                  Meet your personal computer?!
-                </p>
-                 <p className="text-xl pt-4">
-                  For every approved hour you spent coding, we&apos;ll provide you $5 in grants to buy your computer
-                </p>
-              </div>
+          <div className="relative z-50 flex flex-colgap-4 text-brand-secondary font-bold text-center items-center bg-white rounded-4xl ring-8 ring-white/40 hover:scale-105
+              active:scale-95 transition-all ease-in-out pointer-events-auto pt-4">
+            <div className="py-4 px-16">
+              <p className="text-xl text-brand-accent">
+                Step 5:
+              </p>
+              <p className="text-3xl ">
+                Meet your personal computer?!
+              </p>
+              <p className="text-xl pt-4">
+                For every approved hour you spent coding, we&apos;ll provide you $5 in grants to buy your computer
+              </p>
             </div>
+          </div>
 
 
           {/*computers*/}
-          <div className="z-50 px-16 grid grid-cols-3 gap-32 justify-center items-center">
+          <div className="z-50 px-16 -mb-8 pt-8 grid grid-cols-3 gap-32 justify-center items-center">
             <Link
               href="https://www.backmarket.com/en-us/p/lenovo-100e-116-inch-amd-a4-9120c-4-gb-hdd-32-gb/ef382c91-4a88-4002-a20c-1825cb623fb8?l=12"
               target="_blank"
@@ -190,13 +211,13 @@ export default function Home() {
                 height={400}
                 className="object-cover rounded-2xl "
               />
-              <p className="text-xl text-center text-white -mt-4">
+              <p className="text-xl text-center text-white">
                 Refurbished Lenovo Chromebook <br /> (32 GB storage, 4GB RAM)
               </p>
             </Link>
 
             <Link
-              href="https://www.backmarket.com/en-us/p/lenovo-100e-116-inch-amd-a4-9120c-4-gb-hdd-32-gb/ef382c91-4a88-4002-a20c-1825cb623fb8?l=12"
+              href="https://www.backmarket.com/en-us/p/macbook-air-116-inch-2015-core-i5-4gb-ssd-121-gb/2fad44a3-6580-4e6e-91a6-6889853df611?l=12&variantClicked=true&pickerClicked=true#scroll=false"
               target="_blank"
               className="flex flex-col items-center rotate-5 md:rotate-[10deg] hover:scale-120
               active:scale-95 transition-all ease-in-out pointer-events-auto group"
@@ -208,7 +229,7 @@ export default function Home() {
                 height={500}
                 className="object-cover rounded-2xl "
               />
-              <p className="text-xl text-center text-white -mt-4">
+              <p className="text-xl text-center text-white -mt-8">
                 Refurbished MacBook Air (2015, 128 GB storage, 4GB RAM)
               </p>
             </Link>
@@ -226,11 +247,12 @@ export default function Home() {
                 height={500}
                 className="object-cover rounded-2xl "
               />
-              <p className="text-xl text-center text-white -mt-4">
+              <p className="text-xl text-center text-white -mt-8">
                 Refurbished MacBook Air (2017, 128 GB storage, 8GB RAM)
               </p>
             </Link>
           </div>
+
         </div>
 
         {/*faq*/}

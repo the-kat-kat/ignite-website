@@ -33,7 +33,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${monoTrust.variable} ${monoTrustSans.variable} h-full antialiased`}    >
-      <body className="m-0 min-h-full flex flex-col overflow-x-hidden"
+      <body className="m-0 grow"
         suppressHydrationWarning={true}
       >
         <Header />

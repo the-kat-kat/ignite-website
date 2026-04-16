@@ -1,5 +1,9 @@
 'use client';
+import { Layout } from '@rive-app/react-canvas';
+import { Alignment } from '@rive-app/react-canvas';
+import { Fit } from '@rive-app/react-canvas';
 import { useRive, useStateMachineInput } from '@rive-app/react-canvas';
+import { on } from 'events';
 import { useEffect } from 'react';
 
 interface RiveProps {
@@ -22,6 +26,13 @@ export default function RiveAnim({
         src: src,
         stateMachines: stateMachine,
         autoplay: true,
+        layout: new Layout({
+            fit: Fit.FitWidth,
+            alignment: Alignment.Center,
+        }),
+        onLoad: () => {
+            rive?.resizeDrawingSurfaceToCanvas();
+        }
     });
 
     const mouseXInput = useStateMachineInput(rive, stateMachine, inputX);
@@ -60,7 +71,7 @@ export default function RiveAnim({
 
     return (
         <div className={className}>
-            <RiveComponent className="w-full h-full"/>
+            <RiveComponent />
         </div>
     );
 }
